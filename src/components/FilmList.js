@@ -22,10 +22,25 @@ export default class FilmList extends Component {
         )))
 
     }
+    displayCard() {
+        let styleDiv = {
+            display: 'flex',
+            maxWidth: '4000',
+            height: '35',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+        }
+        return (
+            <div style={styleDiv}>
+                {this.cardCreation()}
+            </div>
+        )
+    }
 
     render(){
         return(<div>
-            {this.cardCreation()}
+            {this.displayCard()}
         </div>)
     }
 }
