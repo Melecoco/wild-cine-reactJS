@@ -23,20 +23,19 @@ class App extends Component {
 
   state = {
     
-    list: getMostPopularFilms()
+    list: []
+  }
+
+  getDataFilm = async () => {
+    this.setState( {list : await getMostPopularFilms()})
   }
 
   componentDidMount(){
-    console.log('component did mount getMostPoularFilm ?')
     console.log(getMostPopularFilms())
-    //this.setState({
-    //  list: getMostPopularFilms()
-    //})
     
+    this.getDataFilm()
   }
-
   render(){
-    console.log('this state: ' , this.state)
     return (
       <div className="App">
         <FilmList items={this.state.list}></FilmList>
