@@ -53,8 +53,8 @@ export default class FilmList extends Component {
     }
 
     render(){
-        return(
-            this.displayCard()
-        )
+        return(<div>
+            {this.displayCard()}
+        </div>)
     }
 }

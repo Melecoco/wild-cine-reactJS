@@ -16,7 +16,7 @@ let testTableau = [{id: 1, title: 'test', releaseYear: 'test', synopsis: 'test',
 {id: 10, title: 'ohoh pere noel', releaseYear: 'test', synopsis: 'test', poster: ''},
 {id: 11, title: '?????', releaseYear: 'test', synopsis: 'test', poster: ''},
 {id: 12, title: 'Nihao', releaseYear: 'test', synopsis: 'test', poster: ''},
-{id: 13, title: 'XaiXien', releaseYear: 'test', synopsis: 'test', poster: ''}];
+{id: 13, title: 'XaiXien', releaseYear: 'test', synopsis: 'test', poster: ''}]
 
 
 class App extends Component {
