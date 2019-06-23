@@ -14,12 +14,11 @@ export default class FilmList extends Component {
 
     cardCreation() {
         const {items} = this.props
-        console.log('what type in cardCreation ? ', items)
-        console.log('typeof items ', typeof items)
-
+       
 
         return (items.map( item => (
-            <MovieCardsCreator 
+            <Link to={`/movies/${item.id}`} >
+                <MovieCardsCreator 
                 key = {item.id}
                 id = {item.id}
                 className = 'card'
@@ -28,6 +27,8 @@ export default class FilmList extends Component {
                 synopsis = {item.synopsis}
                 poster = {getPosterFromApi(item.poster)}
                 ></MovieCardsCreator>
+            </Link>
+            
 
         )))
 

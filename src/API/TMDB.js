@@ -21,12 +21,13 @@ export async function getFilmsFromApiWithSearchedText(text) {
     })
 }
 
-export async function getMostPopularFilms() {
+export async function getMostPopularFilms(page) {
     
     const {data: {results}} = await axios.get('https://api.themoviedb.org/3/discover/movie', {
         params: {
             api_key: API_TOKEN,
             language: 'fr-FR',
+            page: page
         },
     })
 
