@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MovieCardsCreator from './MovieCardsCreator';
-import {getMostPopularFilms} from './../API/TMDB.js';
+
 import {Link} from "react-router-dom";
 import {getPosterFromApi} from './../API/TMDB'
 
@@ -19,7 +19,8 @@ export default class FilmList extends Component {
 
 
         return (items.map( item => (
-            <MovieCardsCreator 
+            <Link to={`/movies/${item.id}`}>
+                <MovieCardsCreator 
                 key = {item.id}
                 id = {item.id}
                 className = 'card'
@@ -28,7 +29,7 @@ export default class FilmList extends Component {
                 synopsis = {item.synopsis}
                 poster = {getPosterFromApi(item.poster)}
                 ></MovieCardsCreator>
-
+            </Link>
         )))
 
     }

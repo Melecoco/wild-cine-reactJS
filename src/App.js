@@ -1,36 +1,36 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FilmList from './components/FilmList.js';
-import Searcher from './components/Searcher'
-import {getMostPopularFilms} from './API/TMDB'
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import {DetailMovieView} from "./views/DetailMovieView";
+import {PopularMoviesView} from "./views/PopularMoviesView";
 
-class App extends Component {
+function App() {
 
-  state = { 
-    list: []
-  }
+  return (
+      <div>
+        <Router>
+            <Route
+                path="/"
+                exact
+                component={PopularMoviesView}
+            />
+            {/* <Route
+                path="/:nav"
+                exact
+                component={MoviesView}
+            /> */}
 
-  getDataFilm = async () => {
-    this.setState( {list : await getMostPopularFilms()})
-  }
-
-  sendToState(list){
-    this.setState({list})
-  }
-
-  componentDidMount(){
-    this.getDataFilm()
-  }
-  render(){
-    return (
-      <div className="App">
-        <Searcher onComplete={this.sendToState.bind(this)}></Searcher>
-        <FilmList items={this.state.list}></FilmList>
+            <Route
+                path="/movies/:movieId"
+                exact
+                component={DetailMovieView}
+            /> 
+        </Router>
       </div>
-    );
-  }
+  );
 }
-  
 
 export default App;
+
+
