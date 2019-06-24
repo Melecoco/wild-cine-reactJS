@@ -1,0 +1,50 @@
+.detail-container{
+    height: 150px;
+    display: flex;
+    border-bottom: solid 5px lightseagreen;
+    border-left: solid 5px lightseagreen;
+    border-right: solid 5px lightseagreen;}
+.titre{
+    background-color: lightseagreen;
+    border: solid 5px lightseagreen;
+}
+
+.poster{
+    border: solid 10px lightseagreen;
+    background-color: lightseagreen;
+}
+
+.main{
+    padding: 75px;
+    display: flex;
+}
+.detail-container h1{
+    margin-left: 5px;
+}
+.detail-container div{
+    margin-top:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.detail-container h6{
+    margin-left: 5px;
+}
+.detail-infos{
+    min-width: 70%;
+    max-width: 900px;
+}
+.genre, .releasedYear, .producers{
+    max-height: 100%;
+    
+}
+.titre h1{
+    font-size: 50px;
+    color: white;
+}
+/* .detail-container producers{
+    max-height: 100%;
+} */
+/* .detail-container h1{
+    display: flex;
+} */
