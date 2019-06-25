@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import {getBackdropFromApi, getFilmDetailFromApi, getPosterFromApi} from "./../API/TMDB";
 import './viewsCss/DetailMovieView.css'
-
+import {Footer} from '../components/Footer/Footer'
 
 // import "../Helpers/App.css"
 
@@ -113,25 +113,25 @@ export class DetailMovieView extends Component {
 
                 <div className='poster' style={{backgroundColor: `${this.state.backGroundColor}`, 
                 borderColor: `${this.state.borderColor}`}}>
-                    <div>
+                    <div className='colorChanger rounded'>
                         <h5>Change color for fun</h5>
-                        <select onChange={(e)=>this.handleChangeColor(e)}>
-                        <option value="lightseagreen">bleu turquoise</option>
-                        <option value="lightcoral">rose corail</option>
-                        <option value="lightgreen">vert pelouse</option>
-                    </select>
+                        <div className='forButton'>
+                                <button id='lightseagreen' onClick={(e)=>this.handleChangeColor(e)} value="lightseagreen"></button>
+                                <button id="lightcoral" onClick={(e)=>this.handleChangeColor(e)} value="lightcoral"></button>
+                                <button id="lightgreen" onClick={(e)=>this.handleChangeColor(e)} value="lightgreen"></button>
+                                <button id= "lightblue" onClick={(e)=>this.handleChangeColor(e)} value="lightblue"></button>
+                                <button id="blue" onClick={(e)=>this.handleChangeColor(e)} value="blue"></button>
+                                <button id="red" onClick={(e)=>this.handleChangeColor(e)} value="red"></button>
+                                <button id="orange" onClick={(e)=>this.handleChangeColor(e)} value="orange"></button>
+                                <button id= "black" onClick={(e)=>this.handleChangeColor(e)} value="black"></button>
+                        </div>
+                        
                     </div>
                     
                     <img src={getPosterFromApi(poster_path)}/>
                 </div>
             </main>
-            
-            
-
-            
-            
-            
-            
+            <Footer></Footer>       
         </div>
         )
     }
