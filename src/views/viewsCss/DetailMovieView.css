@@ -1,18 +1,29 @@
 .detail-container{
     height: 150px;
     display: flex;
-    border-bottom: solid 5px lightseagreen;
-    border-left: solid 5px lightseagreen;
-    border-right: solid 5px lightseagreen;}
+
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-right-style: solid;
+    border-right-width: 5px;
+    
+}
+
 .titre{
-    background-color: lightseagreen;
-    border: solid 5px lightseagreen;
+    
+    border-style: solid ;
+    border-width: 10px;
 }
 
 .poster{
-    border: solid 10px lightseagreen;
-    background-color: lightseagreen;
+    border-style: solid ;
+    border-width: 10px;
+    
 }
+
+
 
 .main{
     padding: 75px;
